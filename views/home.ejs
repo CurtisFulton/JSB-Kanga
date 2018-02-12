@@ -7,8 +7,55 @@
 <body>	
 	<% include ./partials/header.ejs %>
 
-	<h1>Home</h1>
-	
+	<section class="showcase"></section>
+	<main class="container">
+		<div>
+			<h1>Our services</h1>
+			<ul>
+				<li>Service 1</li>
+				<li>Service 2</li>
+				<li>Service 3</li>
+			</ul>
+		</div>
+
+		<div>
+			<h1>Our Equipment</h1>
+			<div class="equipment-item">
+				<img class="equipment-img" src="/images/excavator.jpg">
+				<section class="equipment-info">
+					<h1>Excavator</h1>
+					<ul>
+						<li>Bucket</li>
+						<li>Small</li>
+						<li>etc</li>
+					</ul>
+				</section>
+			</div>
+			<div class="equipment-item">
+				<img class="equipment-img" src="/images/excavator.jpg">
+				<section class="equipment-info">
+					<h1>Kanga</h1>
+					<ul>
+						<li>Bucket</li>
+						<li>Small</li>
+						<li>etc</li>
+					</ul>
+				</section>
+			</div>
+			<div class="equipment-item">
+				<img class="equipment-img" src="/images/excavator.jpg">
+				<section class="equipment-info">
+					<h1>Kanga kid</h1>
+					<ul>
+						<li>Bucket</li>
+						<li>Small</li>
+						<li>etc</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</main>
+
 	<% include ./partials/footer.ejs %>
 </body>
 </html>
