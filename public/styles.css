@@ -1,0 +1,57 @@
+html {
+	position: relative;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Header CSS */
+.nav-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	height: 5em;
+	margin: 0 0;
+	overflow: auto;
+
+	border-bottom: 1px solid black;
+}
+
+.main-nav {
+	margin: auto 0;
+}
+
+.main-nav a {
+	text-decoration: none;
+	margin: 0 1em;
+	font-size: 1.2em;
+	color: black;
+}
+
+/* Footer CSS */
+.main-footer {
+	position: absolute;
+	bottom: 0;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	height: 5em;
+	width: 100%;
+	margin: 0 0;
+	overflow: auto;
+
+	border-top: 1px solid black;
+}
+
+.footer-section {
+	margin: auto 0;
+}
