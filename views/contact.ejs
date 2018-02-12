@@ -11,8 +11,8 @@
 		
 		<section class="contact-details">
 			<h1>Contact Us</h1>
-			<h2>Email: </h2> <a href="mailto: JSBKanga@outlook.com">JSBKanga@outlook.com</a>
-			<h2>Contact Number: </h2> <a href="tel: 0409227592">04 0922 7595</a>
+			<div class="contact-info"><h3 class="inline">Email: </h3> <a href="mailto: JSBKanga@outlook.com">JSBKanga@outlook.com</a></div>
+			<div class="contact-info"><h3 class="inline">Contact Number: </h3> <a href="tel: 0409227592">04 0922 7595</a></div>
 		</section>
 
 		<h2 class="strike-through">OR</h2>
@@ -21,13 +21,20 @@
 			<form>
 				<h1>Request a Quote</h1>
 
-				<input type="text" name="name" placeholder="Name">
-				<input type="text" name="number" placeholder="Contact Number">
-				<input type="text" name="name" placeholder="Email">
-				<input type="text" name="name" placeholder="Address">
-				<input type="text" name="name" placeholder="Suburb">
-				<textarea placeholder="Job Description"></textarea>
-				<input type="submit">
+				<section class="contact-form">
+					<h2 class="margin-left">Contact Details</h2>
+					<div class="form-input">
+						<input type="text" name="fname" placeholder="First Name" required>
+						<input type="text" name="lname" placeholder="Surname">
+						<input type="text" name="number" placeholder="Contact Number" required>
+						<input type="text" name="name" placeholder="Email">
+						<input type="text" name="name" placeholder="Address">
+						<input type="text" name="name" placeholder="Suburb" required>
+					</div>
+				</section>
+				<h2 class="margin-left">Job Details</h2>
+				<textarea class="job-description" placeholder="Job Description (Optional)"></textarea>
+				<input class="submit-btn" type="submit">
 			</form>
 		</section>
 	</main>
