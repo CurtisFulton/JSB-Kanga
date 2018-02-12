@@ -7,7 +7,30 @@
 <body>	
 	<% include ./partials/header.ejs %>
 
-	<h1>Contact</h1>
+	<main class="main-container">
+		
+		<section class="contact-details">
+			<h1>Contact Us</h1>
+			<h2>Email: </h2> <a href="mailto: JSBKanga@outlook.com">JSBKanga@outlook.com</a>
+			<h2>Contact Number: </h2> <a href="tel: 0409227592">04 0922 7595</a>
+		</section>
+
+		<h2 class="strike-through">OR</h2>
+
+		<section class="quote-request">
+			<form>
+				<h1>Request a Quote</h1>
+
+				<input type="text" name="name" placeholder="Name">
+				<input type="text" name="number" placeholder="Contact Number">
+				<input type="text" name="name" placeholder="Email">
+				<input type="text" name="name" placeholder="Address">
+				<input type="text" name="name" placeholder="Suburb">
+				<textarea placeholder="Job Description"></textarea>
+				<input type="submit">
+			</form>
+		</section>
+	</main>
 
 	<% include ./partials/footer.ejs %>
 </body>
