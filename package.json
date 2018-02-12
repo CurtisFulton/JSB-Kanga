@@ -1,0 +1,23 @@
+{
+  "name": "jsb-kanga",
+  "version": "1.0.0",
+  "description": "A simple 4 page website for JSB Kanga",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CurtisFulton/JSB-Kanga.git"
+  },
+  "author": "Curtis Fulton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CurtisFulton/JSB-Kanga/issues"
+  },
+  "homepage": "https://github.com/CurtisFulton/JSB-Kanga#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}

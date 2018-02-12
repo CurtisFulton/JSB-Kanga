@@ -1,0 +1,301 @@
+html {
+	position: relative;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+body {
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+
+	background-color: #E6E6E6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'overpass', sans-serif;
+}
+
+
+/* Header CSS */
+.nav-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	height: 5em;
+	margin: 0 0;
+	overflow: auto;
+
+	background-color: #F2F2F2;
+	border-bottom: 1px solid black;
+}
+
+.main-nav {
+	margin: auto 0;
+}
+
+.main-nav a {
+	text-decoration: none;
+	margin: 0 1em;
+	font-size: 1.2em;
+	color: black;
+}
+
+/* Footer CSS */
+.main-footer {
+	position: relative;
+	bottom: 0;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	height: 5em;
+	width: 100%;
+	margin: 0 0;
+	overflow: auto;
+
+	border-top: 1px solid black;
+}
+
+.footer-section {
+	margin: auto 0;
+}
+
+/* All Pages */
+
+.main-container {
+	background-color: #F2F2F2;
+	overflow: auto;
+	min-height: calc(100vh - 10.1em);
+
+	padding: 0;
+	margin: auto;
+	width: 70%;
+}
+
+.strike-through {
+	overflow: hidden;
+	text-align: center; 
+	margin-bottom: 1em;
+}
+
+.strike-through:before, .strike-through:after {
+	background-color: black;
+	content: "";
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%; 
+}
+
+.strike-through:before {
+	right: 0.5em;
+	margin-left: -50%; 
+}
+
+.strike-through:after {
+	left: 0.5em;
+	margin-right: -50%; 
+}
+
+.center-content {
+	display: flex;
+	flex-direction: column;
+
+	width: 70%;
+	text-align: center;
+	margin: auto;
+}
+
+.inline {
+	display: inline;
+}
+
+/* Home Page */
+.showcase {
+	background-image: url(../images/earth-works.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	height: 60vh;
+	width: 100%;
+}
+
+.services {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	list-style: none;
+	width: 50%;
+	text-align: center;
+	margin: auto;
+}
+
+.service-item {
+	width: 50%;
+	margin-bottom: 1em;
+	font-size: 1.2em;
+}
+
+.equipment-item {
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(230, 230, 230, 0.2);
+
+	width: 80%;
+	justify-content: space-between;
+	margin: 1em auto;
+	margin-bottom: 5em;
+}
+
+.equipment-item:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+
+.equipment-img {
+	width: 45%;
+	height: 40%;
+	box-shadow: 1px 1px 10px black;
+}
+
+.equipment-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: 60%;
+	margin-left: 3em;
+}
+
+.info-list {	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	text-align: center;
+}
+
+.info-item {
+	width: 50%;
+	margin-bottom: 1em;
+}
+
+/* About */
+
+.our-company, .about-me, .testimonies {
+	margin-bottom: 5em;
+}
+
+.about-me {
+	background-color: #E6E6E6;
+	border-left: 5px solid #F2F2F2; 
+	border-right: 5px solid #F2F2F2; 
+}
+
+
+/* Gallery */
+.gallery-container {
+	display: flex;
+	flex-direction: column;
+
+	margin: 2em 3em;
+	margin-bottom: 0em;
+}
+
+.gallery-imgs {
+	display: flex;
+	flex-direction: row;
+
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.gallery-imgs a {
+	width: 23%;
+	margin: 0.5em 0.5em;
+}
+
+.gallery-img {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Contact us */
+
+.quote-request {
+	border: 1px solid black;
+	margin: auto;
+	margin-bottom: 2em;
+	width: 65%;
+
+	text-align: center;
+}
+
+.contact-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-info {
+	margin: 1em 0;
+}
+
+.contact-info a {
+	text-decoration: none;
+	color: black;
+}
+
+.contact-form {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	background-color: #E6E6E6;
+	text-align: left;
+}
+
+.margin-left {
+	text-align: left;
+	margin-left: 1em;
+}
+
+.form-input {
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: space-around;
+	flex-direction: row; 
+}
+
+.form-input input {
+	width: 40%;
+	margin-bottom: 1.5em;
+	height: 2em;
+}
+
+.job-description {
+	margin: 1.5em auto;
+	width: 90%;
+	height: 5em;
+	resize: none;
+}
+
+.submit-btn {
+	width: 100%;
+	height: 3em;
+	border: none;
+	background-color: #D0D0D0;
+}
+
+.submit-btn:hover {
+	background-color: #C0C0C0;
+}

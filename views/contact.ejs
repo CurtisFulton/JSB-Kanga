@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSB - Kanga</title>
+	<% include ./partials/head.ejs %>
+</head>
+<body>	
+	<% include ./partials/header.ejs %>
+
+	<main class="main-container">
+		
+		<section class="contact-details">
+			<h1>Contact Us</h1>
+			<div class="contact-info"><h3 class="inline">Email: </h3> <a href="mailto: JSBKanga@outlook.com">JSBKanga@outlook.com</a></div>
+			<div class="contact-info"><h3 class="inline">Contact Number: </h3> <a href="tel: 0409227592">04 0922 7595</a></div>
+		</section>
+
+		<h2 class="strike-through">OR</h2>
+
+		<section class="quote-request">
+			<form>
+				<h1>Request a Quote</h1>
+
+				<section class="contact-form">
+					<h2 class="margin-left">Contact Details</h2>
+					<div class="form-input">
+						<input type="text" name="fname" placeholder="First Name" required>
+						<input type="text" name="lname" placeholder="Surname">
+						<input type="text" name="number" placeholder="Contact Number" required>
+						<input type="text" name="name" placeholder="Email">
+						<input type="text" name="name" placeholder="Address">
+						<input type="text" name="name" placeholder="Suburb" required>
+					</div>
+				</section>
+				<h2 class="margin-left">Job Details</h2>
+				<textarea class="job-description" placeholder="Job Description (Optional)"></textarea>
+				<input class="submit-btn" type="submit">
+			</form>
+		</section>
+	</main>
+
+	<% include ./partials/footer.ejs %>
+</body>
+</html>
