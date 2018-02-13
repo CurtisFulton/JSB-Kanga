@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 	justify-content: space-around;
 
 	height: 5em;
+	width: 100%;
 	margin: 0 0;
 	overflow: auto;
 
@@ -71,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 .main-container {
 	background-color: #F2F2F2;
 	overflow: auto;
+	overflow-x: hidden;
 	min-height: calc(100vh - 10.1em);
 
 	padding: 0;
@@ -157,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 1em auto;
 	margin-bottom: 5em;
 
-	transition: all;
+	transition: background-color;
 	transition-timing-function: ease-out;
 	transition-duration: 1s;
 }
@@ -190,12 +192,14 @@ h1, h2, h3, h4, h5, h6 {
 	flex-direction: row;
 	flex-wrap: wrap;
 
+	padding-left: 1em;
 	text-align: center;
 }
 
 .info-item {
 	width: 50%;
 	margin-bottom: 1em;
+	text-align: left;
 }
 
 /* About */
@@ -216,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: flex;
 	flex-direction: column;
 
-	margin: 2em 3em;
+	margin: 2em 5em;
 	margin-bottom: 0em;
 }
 
@@ -224,14 +228,14 @@ h1, h2, h3, h4, h5, h6 {
 	display: flex;
 	flex-direction: row;
 
-	justify-content: flex-start;
+	justify-content: space-between;
 	flex-wrap: wrap;
-
 }
 
 .gallery-imgs a {
 	width: 23%;
 	margin: 0.5em 0.5em;
+	margin-bottom: 1.5em;
 }
 
 .gallery-img {
@@ -325,4 +329,118 @@ form {
 
 .submit-btn:hover {
 	background-color: #C0C0C0;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 1224px) {
+	.main-container {
+		width: 100%;
+	}
+
+	.gallery-imgs a {
+		width: 30%;
+	}
+
+	.form-input {
+		flex-direction: column;
+	}
+
+	.form-input input {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.equipment-item {
+		flex-direction: column;
+		width: 80%;
+		margin: inherit auto;
+	}
+
+	.equipment-info {
+		width: 100%;
+	}
+
+	.equipment-img {
+		width: 100%;
+	}
+
+	.equipment-item:nth-child(odd) {
+		flex-direction: column;
+	}
+
+	.services {
+		text-align: left;
+		width: 80%;
+	}
+
+	.showcase {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-attachment: scroll;
+
+		height: 60vh;
+		width: 100%;
+	}
+
+	.gallery-container {
+		margin-left: 0em;
+		margin-right: 0em;
+	}
+
+	.gallery-imgs a {
+		width: 45%;
+	}
+
+	.quote-request {
+		width: 80%;
+	}
+
+	.form-input input {
+		width: 90%;
+	}
+}
+
+@media (max-width: 480px) {
+	.equipment-item {
+		width: 100%;
+	}
+
+	.equipment-info {
+		margin-left: 1em;
+	}
+
+	.services {
+		flex-direction: column;
+		text-align: center;
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.service-item {
+		width: 100%;
+	}
+
+	.gallery-imgs a {
+		width: 90%;
+		margin: auto;
+		margin-bottom:  1em;
+	}
+
+	.quote-request {
+		width: 100%;
+		box-shadow: none;
+	}
+
+	.form-input input {
+		width: 98%;
+		margin-left: 0;
+		margin-right: 0;
+	}	
 }
