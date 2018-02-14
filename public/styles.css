@@ -11,44 +11,27 @@ body {
 	margin: 0;
 	padding: 0;
 
-	background-color: #E6E6E6;
+	background-color: #F2F2F2;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'overpass', sans-serif;
 }
 
+button, .btn {
+	height: 3em;
+	line-height: 3em;
+	padding: 0 1em;
+
+	border: none;
+	background-color: #D0D0D0;
+
+	text-decoration: none;
+	color: inherit;
+}
 
 /* Header CSS */
 .nav-bar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-
-	height: 5em;
-	margin: 0 0;
-	overflow: auto;
-
-	background-color: #F2F2F2;
-	border-bottom: 1px solid black;
-}
-
-.main-nav {
-	margin: auto 0;
-}
-
-.main-nav a {
-	text-decoration: none;
-	margin: 0 1em;
-	font-size: 1.2em;
-	color: black;
-}
-
-/* Footer CSS */
-.main-footer {
-	position: relative;
-	bottom: 0;
-
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -58,10 +41,54 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 0;
 	overflow: auto;
 
+	background-color: #F2F2F2;
+	border-bottom: 1px solid black;
+}
+
+.main-nav {
+	margin: auto 0;
+	z-index: 5;
+}
+
+.main-nav a {
+	text-decoration: none;
+	margin: 0 1em;
+	font-size: 1.2em;
+	color: black;
+
+}
+
+#hamburger {
+	margin: auto 0;
+	margin-right: 1em;
+	font-size: 2em;
+	line-height: 2em;
+	display: none;
+	z-index: 10;
+}
+
+/* Footer CSS */
+.main-footer {
+	position: relative;
+	bottom: 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+
+	height: 5em;
+	width: 100%;
+	margin: 0 0;
+	overflow: auto;
+
+	background-color: #E6E6E6; 	
 	border-top: 1px solid black;
 }
 
 .footer-section {
+	display: flex;
+	flex-direction: column;
 	margin: auto 0;
 }
 
@@ -70,11 +97,12 @@ h1, h2, h3, h4, h5, h6 {
 .main-container {
 	background-color: #F2F2F2;
 	overflow: auto;
+	overflow-x: hidden;
 	min-height: calc(100vh - 10.1em);
 
 	padding: 0;
 	margin: auto;
-	width: 70%;
+	width: 75em;
 }
 
 .strike-through {
@@ -117,6 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Home Page */
+
 .showcase {
 	background-image: url(../images/earth-works.jpg);
 	background-position: center;
@@ -148,12 +177,20 @@ h1, h2, h3, h4, h5, h6 {
 .equipment-item {
 	display: flex;
 	flex-direction: row;
-	background-color: rgba(230, 230, 230, 0.2);
+	background-color: rgba(230, 230, 230, 0.4);
 
 	width: 80%;
 	justify-content: space-between;
 	margin: 1em auto;
 	margin-bottom: 5em;
+
+	transition: background-color;
+	transition-timing-function: ease-out;
+	transition-duration: 1s;
+}
+
+.equipment-item:hover {
+	background-color: rgba(230, 230, 230, 1);
 }
 
 .equipment-item:nth-child(odd) {
@@ -161,8 +198,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .equipment-img {
-	width: 45%;
-	height: 40%;
+	width: 40%;
+	height: 35%;
 	box-shadow: 1px 1px 10px black;
 }
 
@@ -180,12 +217,14 @@ h1, h2, h3, h4, h5, h6 {
 	flex-direction: row;
 	flex-wrap: wrap;
 
+	padding-left: 1em;
 	text-align: center;
 }
 
 .info-item {
 	width: 50%;
 	margin-bottom: 1em;
+	text-align: left;
 }
 
 /* About */
@@ -206,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: flex;
 	flex-direction: column;
 
-	margin: 2em 3em;
+	margin: 2em 5em;
 	margin-bottom: 0em;
 }
 
@@ -214,31 +253,33 @@ h1, h2, h3, h4, h5, h6 {
 	display: flex;
 	flex-direction: row;
 
-	justify-content: flex-start;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
 .gallery-imgs a {
 	width: 23%;
 	margin: 0.5em 0.5em;
+	margin-bottom: 1.5em;
 }
 
 .gallery-img {
 	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
+	box-shadow: 1px 1px 5px 1px rgba(0,0,0, 0.65);
 }
 
 
 /* Contact us */
 
 .quote-request {
-	border: 1px solid black;
 	margin: auto;
 	margin-bottom: 2em;
 	width: 65%;
 
 	text-align: center;
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
 }
 
 .contact-details {
@@ -279,14 +320,29 @@ h1, h2, h3, h4, h5, h6 {
 .form-input input {
 	width: 40%;
 	margin-bottom: 1.5em;
-	height: 2em;
+	height: 2.5em;
+
+	padding-left: 0.5em;
+	border: 0;
+	border-radius: 5px;
+}
+
+form {
+	overflow: auto;
 }
 
 .job-description {
 	margin: 1.5em auto;
+	margin-top: 0;
+	font-size: 1.3em;
 	width: 90%;
 	height: 5em;
 	resize: none;
+
+	padding-left: 0.5em;
+	padding-top: 0.5em;
+	border: 0;
+	border-radius: 5px;
 }
 
 .submit-btn {
@@ -294,8 +350,181 @@ h1, h2, h3, h4, h5, h6 {
 	height: 3em;
 	border: none;
 	background-color: #D0D0D0;
+	-webkit-appearance: none;
 }
 
 .submit-btn:hover {
 	background-color: #C0C0C0;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 1224px) {
+	.main-container {
+		width: 100%;
+	}
+
+	.gallery-imgs a {
+		width: 30%;
+	}
+
+	.form-input {
+		flex-direction: column;
+	}
+
+	.form-input input {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.equipment-item {
+		flex-direction: column;
+		width: 80%;
+		margin: inherit auto;
+	}
+
+	.equipment-info {
+		width: 100%;
+	}
+
+	.equipment-img {
+		width: 100%;
+	}
+
+	.equipment-item:nth-child(odd) {
+		flex-direction: column;
+	}
+
+	.services {
+		text-align: left;
+		width: 80%;
+	}
+
+	.showcase {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-attachment: scroll;
+
+		height: 60vh;
+		width: 100%;
+	}
+
+	.gallery-container {
+		margin-left: 0em;
+		margin-right: 0em;
+	}
+
+	.gallery-imgs a {
+		width: 45%;
+	}
+
+	.quote-request {
+		width: 80%;
+	}
+
+	.form-input input {
+		width: 90%;
+	}
+
+	#hamburger {
+		display: inline-flex;
+	}
+
+	.nav-bar {
+		justify-content: space-between;
+	}
+
+	.nav-title {
+		margin-left: 1em;
+	}
+
+	.main-nav {
+		display: none;
+		position: fixed;
+		width: 100%;
+		height: calc(100% - 10em);
+
+		padding-top: 5em;
+		padding-bottom: 5em;
+
+		top: 0em;
+  		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: rgba(240, 240, 240, 0.975);
+	}
+
+	.main-nav a {
+		width: 100%;
+		height: 4em;
+		line-height: 4em;
+		border-top: 1px solid black;
+		text-align: center;
+	}
+
+	.main-nav a:last-of-type {
+		border-bottom: 1px solid black;
+	}
+
+	#menu-toggle:checked + .main-nav {
+		display: flex;
+	}
+}
+
+@media (max-width: 480px) {
+	.equipment-item {
+		width: 100%;
+	}
+
+	.equipment-info {
+		margin-left: 1em;
+	}
+
+	.services {
+		flex-direction: column;
+		text-align: center;
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.service-item {
+		width: 100%;
+	}
+
+	.gallery-imgs a {
+		width: 90%;
+		margin: auto;
+		margin-bottom:  1em;
+	}
+
+	.quote-request {
+		width: 100%;
+		box-shadow: none;
+	}
+
+	.form-input input {
+		width: 98%;
+		margin-left: 0;
+		margin-right: 0;
+	}	
+
+	.showcase {
+		display: none;
+	}
+
+	.main-footer {
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+	}
+
+	.footer-section {
+		margin: 1em 0;
+	}
 }
