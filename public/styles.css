@@ -18,6 +18,17 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'overpass', sans-serif;
 }
 
+button, .btn {
+	height: 3em;
+	line-height: 3em;
+	padding: 0 1em;
+
+	border: none;
+	background-color: #D0D0D0;
+
+	text-decoration: none;
+	color: inherit;
+}
 
 /* Header CSS */
 .nav-bar {
@@ -62,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 	bottom: 0;
 
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-around;
 
@@ -75,6 +87,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-section {
+	display: flex;
+	flex-direction: column;
 	margin: auto 0;
 }
 
@@ -336,6 +350,7 @@ form {
 	height: 3em;
 	border: none;
 	background-color: #D0D0D0;
+	-webkit-appearance: none;
 }
 
 .submit-btn:hover {
@@ -447,8 +462,8 @@ form {
 
 	.main-nav a {
 		width: 100%;
-		height: 5em;
-		line-height: 5em;
+		height: 4em;
+		line-height: 4em;
 		border-top: 1px solid black;
 		text-align: center;
 	}
@@ -501,5 +516,15 @@ form {
 
 	.showcase {
 		display: none;
+	}
+
+	.main-footer {
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+	}
+
+	.footer-section {
+		margin: 1em 0;
 	}
 }
