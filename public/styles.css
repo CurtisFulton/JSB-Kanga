@@ -94,6 +94,10 @@ button, .btn {
 
 /* All Pages */
 
+.highlight {
+	color: #01579b;
+}
+
 .main-container {
 	background-color: #F2F2F2;
 	overflow: auto;
