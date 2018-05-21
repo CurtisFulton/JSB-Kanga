@@ -243,6 +243,22 @@ button, .btn {
 	border-right: 5px solid #F2F2F2; 
 }
 
+.all-services {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	width: 65%;
+	text-align: center;
+	margin: auto;
+}
+
+.all-services .service-item {
+	width: 40%;
+	margin-bottom: 1em;
+	padding-right: 10%;
+	font-size: 1.2em;
+}
 
 /* Gallery */
 .gallery-container {

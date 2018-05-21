@@ -18,7 +18,7 @@
 		<h2 class="strike-through">OR</h2>
 
 		<section class="quote-request">
-			<form>
+			<form action="/submit_quote" method="post">
 				<h1>Request a Quote</h1>
 
 				<section class="contact-form">
@@ -26,14 +26,14 @@
 					<div class="form-input">
 						<input type="text" name="fname" placeholder="First Name" required>
 						<input type="text" name="lname" placeholder="Surname">
-						<input type="text" name="number" placeholder="Contact Number" required>
-						<input type="text" name="name" placeholder="Email">
-						<input type="text" name="name" placeholder="Address">
-						<input type="text" name="name" placeholder="Suburb" required>
+						<input type="number" name="number" placeholder="Contact Number" required>
+						<input type="text" name="suburb" placeholder="Suburb" required>
+						<input type="email" name="email" placeholder="Email (Optional)">
+						<input type="text" name="address" placeholder="Address (Optional)">
 					</div>
 				</section>
 				<h2 class="margin-left">Job Details</h2>
-				<textarea class="job-description" placeholder="Job Description (Optional)"></textarea>
+				<textarea type="Message" name="description" class="job-description" placeholder="Job Description (Optional)"></textarea>
 				<input class="submit-btn" type="submit">
 			</form>
 		</section>
